@@ -1,0 +1,94 @@
+import LoginForm from '@/components/auth/LoginForm';
+import Link from 'next/link';
+
+export default function LoginPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-6xl flex items-center justify-between gap-12">
+        {/* Left Side - Branding */}
+        <div className="hidden lg:flex flex-col flex-1 space-y-6">
+          {/* Logo */}
+          <Link href="/" className="inline-flex items-center gap-3 group">
+            <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span className="text-white font-bold text-2xl">C</span>
+            </div>
+            <span className="text-2xl font-bold text-gray-900">CSCA</span>
+          </Link>
+
+          {/* Heading */}
+          <div className="space-y-4">
+            <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+              Chinh phục<br />
+              <span className="text-indigo-600">Kỳ thi CSCA</span>
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Nền tảng luyện thi đầu vào học bổng Trung Quốc với đầy đủ tài liệu, đề thi và thống kê chi tiết.
+            </p>
+          </div>
+
+          {/* Features */}
+          <div className="space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900">10+ Đề thi thử</h3>
+                <p className="text-gray-600">Cập nhật liên tục theo cấu trúc đề thi thật</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900">Thống kê chi tiết</h3>
+                <p className="text-gray-600">Phân tích điểm mạnh, điểm yếu theo từng môn</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900">Cộng đồng học tập</h3>
+                <p className="text-gray-600">Chia sẻ kinh nghiệm, giải đáp thắc mắc</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="flex items-center gap-8 pt-6">
+            <div>
+              <div className="text-3xl font-bold text-indigo-600">1000+</div>
+              <div className="text-sm text-gray-600">Học viên</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-indigo-600">5000+</div>
+              <div className="text-sm text-gray-600">Câu hỏi</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-indigo-600">95%</div>
+              <div className="text-sm text-gray-600">Hài lòng</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side - Login Form */}
+        <div className="flex-1 max-w-md">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <LoginForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

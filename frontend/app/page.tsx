@@ -1,29 +1,33 @@
+import Banner from '@/components/layout/Banner';
 import Header from '@/components/layout/Header';
-import LeftSidebar from '@/components/layout/LeftSidebar';
-import RightSidebar from '@/components/layout/RightSidebar';
-import ForumFeed from '@/components/layout/ForumFeed';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100">
       <Header />
       
-      <main className="container mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Left Sidebar */}
-          <div className="lg:col-span-3">
-            <LeftSidebar />
-          </div>
-
-          {/* Main Content - Forum Feed */}
-          <div className="lg:col-span-6">
-            <ForumFeed />
-          </div>
-
-          {/* Right Sidebar */}
-          <div className="lg:col-span-3">
-            <RightSidebar />
-          </div>
+      {/* Banner - Full Width */}
+      <div className="px-6 py-8">
+        <div className="max-w-[1920px] mx-auto">
+          <Banner />
+        </div>
+      </div>
+      
+      <main className="container mx-auto px-6 py-12 max-w-[1400px]">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Chào mừng đến với CSCA
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Nền tảng luyện thi tiếng Trung toàn diện
+          </p>
+          <Link 
+            href="/forum"
+            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg text-lg font-semibold"
+          >
+            Vào Diễn Đàn
+          </Link>
         </div>
       </main>
     </div>

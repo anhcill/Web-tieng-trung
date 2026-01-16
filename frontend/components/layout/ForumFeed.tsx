@@ -58,17 +58,17 @@ export default function ForumFeed() {
   const [activeTab, setActiveTab] = useState('all');
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       {/* Search Box */}
-      <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4">
+      <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-5">
         <div className="relative">
           <input
             type="text"
             placeholder="Bạn đang thắc mắc điều gì?"
-            className="w-full px-5 py-2.5 pr-12 rounded-full bg-blue-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:bg-blue-100 transition-all text-sm"
+            className="w-full px-6 py-3.5 pr-14 rounded-full bg-blue-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:bg-blue-100 transition-all text-base"
           />
-          <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition-all hover:scale-105 shadow-md">
-            <FiSearch size={18} />
+          <button className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-2.5 rounded-full transition-all hover:scale-105 shadow-md">
+            <FiSearch size={20} />
           </button>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function ForumFeed() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex-1 px-4 py-2.5 text-sm font-semibold transition-all ${
+              className={`flex-1 px-5 py-3.5 text-base font-semibold transition-all ${
                 activeTab === tab.id
                   ? 'text-blue-600 border-b-2 border-blue-600 bg-gradient-to-t from-blue-50 to-transparent'
                   : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
@@ -94,32 +94,32 @@ export default function ForumFeed() {
         {/* Posts */}
         <div className="divide-y divide-gray-50">
           {posts.map((post) => (
-            <div key={post.id} className="p-4 hover:bg-blue-50/30 transition-all cursor-pointer">
-              <div className="flex space-x-3">
+            <div key={post.id} className="p-5 hover:bg-blue-50/30 transition-all cursor-pointer">
+              <div className="flex space-x-4">
                 {/* Avatar */}
                 <div className="flex-shrink-0">
-                  <div className="w-11 h-11 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md ring-2 ring-blue-50">
-                    <span className="text-white text-xs font-bold">{post.avatar}</span>
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md ring-2 ring-blue-50">
+                    <span className="text-white text-sm font-bold">{post.avatar}</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center space-x-2 mb-0.5">
-                    <span className="text-blue-600 font-semibold text-sm hover:underline cursor-pointer">{post.username}</span>
-                    <span className="text-gray-400 text-xs">{post.time}</span>
+                  <div className="flex items-center space-x-2 mb-1">
+                    <span className="text-blue-600 font-semibold text-base hover:underline cursor-pointer">{post.username}</span>
+                    <span className="text-gray-400 text-sm">{post.time}</span>
                   </div>
-                  <p className="text-gray-700 text-sm mb-2.5 leading-relaxed">{post.content}</p>
+                  <p className="text-gray-700 text-base mb-3 leading-relaxed">{post.content}</p>
 
                   {/* Actions */}
-                  <div className="flex items-center space-x-5">
-                    <button className="flex items-center space-x-1.5 text-gray-500 hover:text-red-500 transition-all group">
-                      <FiHeart size={16} className="group-hover:fill-red-500 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">{post.likes}</span>
+                  <div className="flex items-center space-x-6">
+                    <button className="flex items-center space-x-2 text-gray-500 hover:text-red-500 transition-all group">
+                      <FiHeart size={18} className="group-hover:fill-red-500 group-hover:scale-110 transition-transform" />
+                      <span className="text-base font-medium">{post.likes}</span>
                     </button>
-                    <button className="flex items-center space-x-1.5 text-gray-500 hover:text-blue-600 transition-all group">
-                      <FiMessageCircle size={16} className="group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-medium">{post.comments}</span>
+                    <button className="flex items-center space-x-2 text-gray-500 hover:text-blue-600 transition-all group">
+                      <FiMessageCircle size={18} className="group-hover:scale-110 transition-transform" />
+                      <span className="text-base font-medium">{post.comments}</span>
                     </button>
                   </div>
                 </div>

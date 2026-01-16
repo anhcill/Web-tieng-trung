@@ -15,18 +15,18 @@ export default function RightSidebar() {
   ];
 
   return (
-    <aside className="w-full lg:w-56 space-y-3">
+    <aside className="w-full space-y-4">
       {/* Quick Menu Card */}
-      <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-4 sticky top-20">
-        <nav className="space-y-0.5">
+      <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-5 sticky top-20">
+        <nav className="space-y-1">
           {menuItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
-              className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all hover:bg-gray-50 group`}
+              className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all hover:bg-gray-50 group`}
             >
-              <item.icon size={16} className={`flex-shrink-0 ${item.color} group-hover:scale-110 transition-transform`} />
-              <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+              <item.icon size={20} className={`flex-shrink-0 ${item.color} group-hover:scale-110 transition-transform`} />
+              <span className="text-base font-medium text-gray-700 group-hover:text-gray-900">
                 {item.label}
               </span>
             </a>
